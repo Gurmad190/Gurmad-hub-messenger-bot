@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: gurmad-hub-messenger-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: BOT_PROFILE
+        value: hub
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: PAGE_ACCESS_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false

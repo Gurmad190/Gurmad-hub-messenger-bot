@@ -1,0 +1,6 @@
+Flask>=3.0
+requests>=2.31
+python-dotenv>=1.0
+gunicorn>=21.0
+# Optional, only if you want AI answers instead of FAQ-only:
+# openai>=1.30
